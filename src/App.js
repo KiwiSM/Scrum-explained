@@ -1,18 +1,39 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import AgileEstimation from "./Pages/AgileEstimation";
+import Backlog from "./Pages/Backlog";
+import Roles from "./Pages/Roles";
+import ScrumArtifacts from "./Pages/ScrumArtifacts";
+import Sprint from "./Pages/Sprint";
+import SprintPlanning from "./Pages/SprintPlanning";
+import SprintRetrospective from "./Pages/SprintRetrospective";
+import SprintReview from "./Pages/SprintReview";
 
 export default function App() {
   return (
-    <main>
-      <ul>
-        <li><a href="">Roles</a></li>
-        <li><a href="">Backlog</a></li>
-        <li><a href="">Sprint</a></li>
-        <li><a href="">Sprint Planning</a></li>
-        <li><a href="">Scrum Artifacts</a></li>
-        <li><a href="">Sprint Review</a></li>
-        <li><a href="">Sprint Retrospective</a></li>
-        <li><a href="">Agile Estimation</a></li>
-      </ul>
-    </main>
+    <Router>
+      <main>
+        <ul>
+          <Link to="/roles">Roles</Link>
+          <Link to="/backlog">Backlog</Link>
+          <Link to="/sprint">Sprint</Link>
+          <Link to="/sprint-planning">Sprint Planning</Link>
+          <Link to="/scrum-artifacts">Scrum Artifacts</Link>
+          <Link to="/sprint-review">Sprint Review</Link>
+          <Link to="/sprint-retrospective">Sprint Retrospective</Link>
+          <Link to="/agile-estimation">Agile Estimation</Link>
+        </ul>
+        <Routes>
+          <Route path="/roles" element={<Roles />} />
+          <Route path="/backlog" element={<Backlog />} />
+          <Route path="/sprint" element={<Sprint />} />
+          <Route path="sprint-planning" element={<SprintPlanning />} />
+          <Route path="scrum-artifacts" element={<ScrumArtifacts />} />
+          <Route path="sprint-review" element={<SprintReview />} />
+          <Route path="sprint-retrospective" element={<SprintRetrospective />} />
+          <Route path="agile-estimation" element={<AgileEstimation />} />
+        </Routes>
+      </main>
+    </Router>
   );
 }
