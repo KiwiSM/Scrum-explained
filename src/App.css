@@ -1,3 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: black;
+}
+
+button {
+    width: 4rem;
+    height: 2rem;
+    margin: 1rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
 a {
-    display: block;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    background-color: green;
+    padding: 0.5rem;
+    width: 15rem;
 }
