@@ -23,18 +23,19 @@ export default function App() {
         <div>
           <nav>
             <button onClick={toggleMenu}>Menu</button>
+            <Link to="/"><button>Home</button></Link>
           </nav>
           {
             menu ?
             (
               <ul>
-              <Link to="/backlog">Backlog</Link>
-              <Link to="/sprint">Sprint</Link>
-              <Link to="/sprint-planning">Sprint Planning</Link>
-              <Link to="/scrum-artifacts">Scrum Artifacts</Link>
-              <Link to="/sprint-review">Sprint Review</Link>
-              <Link to="/sprint-retrospective">Sprint Retrospective</Link>
-              <Link to="/agile-estimation">Agile Estimation</Link>
+                <Link to="/backlog">Backlog</Link>
+                <Link to="/sprint">Sprint</Link>
+                <Link to="/sprint-planning">Sprint Planning</Link>
+                <Link to="/scrum-artifacts">Scrum Artifacts</Link>
+                <Link to="/sprint-review">Sprint Review</Link>
+                <Link to="/sprint-retrospective">Sprint Retrospective</Link>
+                <Link to="/agile-estimation">Agile Estimation</Link>
             </ul>
             ) : null
           }
